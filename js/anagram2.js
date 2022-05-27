@@ -3,7 +3,7 @@ exports.anagramsFor = function(word, listOfWords) {
     let wordArr= word.split("")
     // console.log(wordArr)
     let answer= listOfWords.filter(function (item) {
-        return wordArr.every(function (letter) {
+        return (word.length===item.length) && wordArr.every(function (letter) {
             return item.includes(letter)
         })
     })
